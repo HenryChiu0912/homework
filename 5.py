@@ -83,7 +83,7 @@ if goal == 1:
             totalc += foods[0][3]
             totalp += foods[0][4]
             totalf += foods[0][5]
-            print('【吃了',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了整份的',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
             foods.pop(0)
         elif foods[0][7] == 1 and cal > 0:
             part = cal / foods[0][2]
@@ -110,7 +110,7 @@ elif goal == 3:
             totalc += foods[0][3]
             totalp += foods[0][4]
             totalf += foods[0][5]
-            print('【吃了',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了整份的',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
             foods.pop(0)
         elif foods[0][7] == 1 and cal > 0:
             part = cal / foods[0][2]
@@ -137,7 +137,7 @@ else:
             totalc += foods[0][3]
             totalp += foods[0][4]
             totalf += foods[0][5]
-            print('【吃了',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了整份的',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
             foods.pop(0)
         elif foods[0][7] == 1 and cal > 0:
             part = cal / foods[0][2]
