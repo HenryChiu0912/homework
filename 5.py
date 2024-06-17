@@ -72,8 +72,9 @@ if goal == 1:
     foods.reverse()
     for i in range(n-1):
         temp2=[]
-        temp2.append(foods[i][2])
-        temp2.append(foods[i][8])
+        name_ad=foods[i][2]
+        rate_ad=foods[i][8]
+        temp2.append([name_ad,rate_ad])
         advise.append(temp2)
     print("單位大卡的碳水化合物熱量(倒數第三項)小者排序:",advise)
     while cal > 0 and len(foods) != 0 :
@@ -98,8 +99,9 @@ elif goal == 3:
     foods.reverse()
     for i in range(n-1):
         temp2=[]
-        temp2.append(foods[i][2])
-        temp2.append(foods[i][8])
+        name_ad=foods[i][2]
+        rate_ad=foods[i][9]
+        temp2.append([name_ad, rate_ad])
         advise.append(temp2)
     print("單位大卡的脂肪熱量(倒數第一項)小者排序:",advise)
     while cal > 0 and len(foods) != 0:
@@ -124,9 +126,10 @@ else:
     foods.reverse()
     for i in range(n-1):
         temp2=[]
-        temp2.append(foods[i][2])
-        temp2.append(foods[i][8])
-        advise.append(temp2)
+        name_ad=foods[i][2]
+        rate_ad=foods[i][8]
+        temp2.append([name_ad,rate_ad])
+        advise.append(temp2
     print("單位重量的熱量(倒數第二項)小者排序:",advise)
     while cal > 0 and len(foods) != 0 :
         if foods[0][2] <= cal :
