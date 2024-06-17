@@ -100,7 +100,7 @@ elif goal == 3:
     for i in range(n-1):
         temp2=[]
         name_ad=foods[i][2]
-        rate_ad=foods[i][9]
+        rate_ad=foods[i][10]
         temp2.append([name_ad, rate_ad])
         advise.append(temp2)
     print("單位大卡的脂肪熱量(倒數第一項)小者排序:",advise)
@@ -127,9 +127,9 @@ else:
     for i in range(n-1):
         temp2=[]
         name_ad=foods[i][2]
-        rate_ad=foods[i][8]
+        rate_ad=foods[i][9]
         temp2.append([name_ad,rate_ad])
-        advise.append(temp2
+        advise.append(temp2)
     print("單位重量的熱量(倒數第二項)小者排序:",advise)
     while cal > 0 and len(foods) != 0 :
         if foods[0][2] <= cal :
