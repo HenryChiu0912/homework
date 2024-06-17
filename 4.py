@@ -73,66 +73,66 @@ if goal == 1:
     print("單位大卡的碳水化合物熱量大者排序:",foods)
     foods.reverse()
     while cal > 0 and len(foods) != 0 :
-         if foods[0+b][2] <= cal :
-             cal -= foods[0+b][2]
-             totalc += foods[0+b][3]
-             totalp += foods[0+b][4]
-             totalf += foods[0+b][5]
-             print('【吃了】',foods[0+b][1],',熱量剩餘：{:.2f}'.format(cal))
-             foods.pop(0+b)
-         elif foods[0+b][7] == 1 and cal > 0:
-                 part = cal / foods[0+b][2]
-                 cal -= part * foods[0+b][2]
-                 totalc += part*foods[0+b][3]
-                 totalp += part*foods[0+b][4]
-                 totalf += part*foods[0+b][5]
-                 print('【吃了】',foods[0+b][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
-         else:
-                 b+=1
+        if foods[0+b][2] <= cal :
+            cal -= foods[0+b][2]
+            totalc += foods[0+b][3]
+            totalp += foods[0+b][4]
+            totalf += foods[0+b][5]
+            print('【吃了】',foods[0+b][1],',熱量剩餘：{:.2f}'.format(cal))
+            foods.pop(0+b)
+        elif foods[0+b][7] == 1 and cal > 0:
+            part = cal / foods[0+b][2]
+            cal -= part * foods[0+b][2]
+            totalc += part*foods[0+b][3]
+            totalp += part*foods[0+b][4]
+            totalf += part*foods[0+b][5]
+            print('【吃了】',foods[0+b][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
+        else:
+            b +=1
 elif goal == 3:
     foods.sort(key=takefat_rate, reverse=True )
     print("單位大卡的脂肪熱量大者排序:",foods)
     foods.reverse()
     while cal > 0 and len(foods) != 0:
         if foods[0+b][2] <= cal :
-             cal -= foods[0+b][2]
-             totalc += foods[0+b][3]
-             totalp += foods[0+b][4]
-             totalf += foods[0+b][5]
-             print('【吃了】',foods[0+b][1],',熱量剩餘：{:.2f}'.format(cal))
-             foods.pop(0+b)
+            cal -= foods[0+b][2]
+            totalc += foods[0+b][3]
+            totalp += foods[0+b][4]
+            totalf += foods[0+b][5]
+            print('【吃了】',foods[0+b][1],',熱量剩餘：{:.2f}'.format(cal))
+            foods.pop(0+b)
         elif foods[0+b][7] == 1 and cal > 0:
-                    part = cal / foods[0+b][2]
-                    cal -= part * foods[0+b][2]
-                    totalc += part*foods[0+b][3]
-                    totalp += part*foods[0+b][4]
-                    totalf += part*foods[0+b][5]
-                    print('【吃了】',foods[0+b][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
+            part = cal / foods[0+b][2]
+            cal -= part * foods[0+b][2]
+            totalc += part*foods[0+b][3]
+            totalp += part*foods[0+b][4]
+            totalf += part*foods[0+b][5]
+            print('【吃了】',foods[0+b][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
         else:
-                 b+=1
+            b +=1
 else:
     foods.sort(key=takecalories_rate, reverse=True )
     print("單位重量的熱量大者排序:",foods)
     foods.reverse()
     while cal > 0 and len(foods) != 0 :
-            if foods[0+b][2] <= cal :
-                print(foods,n,i,cal)
-                cal -= foods[0+b][2]
-                totalc += foods[0+b][3]
-                totalp += foods[0+b][4]
-                totalf += foods[0+b][5]
-                print('【吃了】',foods[0+b][1],',熱量剩餘：{:.2f}'.format(cal))
-                foods.pop(0+b)
-                print(foods,n,i,cal)
-            elif foods[0+b][7] == 1 and cal > 0:
-                    part = cal / foods[0+b][2]
-                    cal -= part * foods[0+b][2]
-                    totalc += part*foods[0+b][3]
-                    totalp += part*foods[0+b][4]
-                    totalf += part*foods[0+b][5]
-                    print('【吃了】',foods[0+b][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
-            else:
-                 b+=1
+        if foods[0+b][2] <= cal :
+            print(foods,n,i,cal)
+            cal -= foods[0+b][2]
+            totalc += foods[0+b][3]
+            totalp += foods[0+b][4]
+            totalf += foods[0+b][5]
+            print('【吃了】',foods[0+b][1],',熱量剩餘：{:.2f}'.format(cal))
+            foods.pop(0+b)
+            print(foods,n,i,cal)
+        elif foods[0+b][7] == 1 and cal > 0:
+            part = cal / foods[0+b][2]
+            cal -= part * foods[0+b][2]
+            totalc += part*foods[0+b][3]
+            totalp += part*foods[0+b][4]
+            totalf += part*foods[0+b][5]
+            print('【吃了】',foods[0+b][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
+        else:
+            b +=1
 totalcal = totalc*4+totalp*4+totalf*9
 if totalcal <= 0:
     totalcal = 0
