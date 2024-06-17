@@ -77,7 +77,7 @@ if goal == 1:
             totalc += foods[0][3]
             totalp += foods[0][4]
             totalf += foods[0][5]
-            print('【吃了】',foods[0][1],',熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
             foods.pop(0)
         elif foods[0][7] == 1 and cal > 0:
             part = cal / foods[0][2]
@@ -85,7 +85,7 @@ if goal == 1:
             totalc += part*foods[0][3]
             totalp += part*foods[0][4]
             totalf += part*foods[0][5]
-            print('【吃了】',foods[0][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了',foods[0][1],'的{:.2f}'.format(part),'份】,熱量剩餘：{:.2f}'.format(cal))
         else:
             foods.pop(0)
 elif goal == 3:
@@ -98,7 +98,7 @@ elif goal == 3:
             totalc += foods[0][3]
             totalp += foods[0][4]
             totalf += foods[0][5]
-            print('【吃了】',foods[0][1],',熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
             foods.pop(0)
         elif foods[0][7] == 1 and cal > 0:
             part = cal / foods[0][2]
@@ -106,7 +106,7 @@ elif goal == 3:
             totalc += part*foods[0][3]
             totalp += part*foods[0][4]
             totalf += part*foods[0][5]
-            print('【吃了】',foods[0][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了',foods[0][1],'的{:.2f}'.format(part),'份】,熱量剩餘：{:.2f}'.format(cal))
         else:
             foods.pop(0)
 else:
@@ -119,7 +119,7 @@ else:
             totalc += foods[0][3]
             totalp += foods[0][4]
             totalf += foods[0][5]
-            print('【吃了】',foods[0][1],',熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了',foods[0][1],'】,熱量剩餘：{:.2f}'.format(cal))
             foods.pop(0)
         elif foods[0][7] == 1 and cal > 0:
             part = cal / foods[0][2]
@@ -127,7 +127,7 @@ else:
             totalc += part*foods[0][3]
             totalp += part*foods[0][4]
             totalf += part*foods[0][5]
-            print('【吃了】',foods[0][1],'的{:.2f}'.format(part),'份,熱量剩餘：{:.2f}'.format(cal))
+            print('【吃了',foods[0][1],'的{:.2f}'.format(part),'份】,熱量剩餘：{:.2f}'.format(cal))
         else:
             foods.pop(0)
 totalcal = totalc*4+totalp*4+totalf*9
