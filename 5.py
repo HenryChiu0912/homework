@@ -70,9 +70,9 @@ advise = []
 if goal == 1:
     foods.sort( key=takecarbohydr_rate, reverse=True )
     foods.reverse()
-    for i in range(n-1):
+    for i in range(n):
         temp2=[]
-        name_ad=foods[i][2]
+        name_ad=foods[i][1]
         rate_ad=foods[i][8]
         temp2.append([name_ad,rate_ad])
         advise.append(temp2)
@@ -97,9 +97,9 @@ if goal == 1:
 elif goal == 3:
     foods.sort(key=takefat_rate, reverse=True )
     foods.reverse()
-    for i in range(n-1):
+    for i in range(n):
         temp2=[]
-        name_ad=foods[i][2]
+        name_ad=foods[i][1]
         rate_ad=foods[i][9]
         temp2.append([name_ad, rate_ad])
         advise.append(temp2)
@@ -124,9 +124,9 @@ elif goal == 3:
 else:
     foods.sort(key=takecalories_rate, reverse=True )
     foods.reverse()
-    for i in range(n-1):
+    for i in range(n):
         temp2=[]
-        name_ad=foods[i][2]
+        name_ad=foods[i][1]
         rate_ad=foods[i][8]
         temp2.append([name_ad,rate_ad])
         advise.append(temp2)
