@@ -98,7 +98,11 @@ for i in range(1,n+1):
     foods.append(temp)
 print("食物陣列:",foods)
 
-cal = calories_per_meal - int(input("請輸入此餐已攝取的熱量: "))
+cal_ed = int(input("請輸入此餐已攝取的熱量(若無請填入0): "))
+while cal_ed < 0:
+    print("請輸入正確的已攝取熱量")
+    cal_ed = int(input("請輸入此餐已攝取的熱量(若無請填入0): "))
+cal = calories_per_meal - cal_ed
 totalc = 0
 totalp = 0
 totalf = 0
@@ -140,7 +144,7 @@ elif goal == 2:
         rate_ad=foods[i][9]
         temp2.append([name_ad,rate_ad])
         advise.append(temp2)
-    print("單位重量的熱量小者排序:",advise)
+    print("單位重量(g)之熱量小者排序:",advise)
     while cal > 0 and len(foods) != 0 :
         if foods[0][2] <= cal :
             cal -= foods[0][2]
@@ -191,3 +195,4 @@ if totalcal <= 0:
 print("剩餘熱量：",'{:.0f}'.format(cal))
 print("此次攝取的總熱量：",'{:.0f}'.format(totalcal))
 print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))
+
