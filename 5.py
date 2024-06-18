@@ -1,4 +1,4 @@
-def takecarbohydr_rate(foods):
+  def takecarbohydr_rate(foods):
     return foods[8]
 
 def takecalories_rate(foods):
@@ -41,7 +41,7 @@ for i in range(1,n+1):
     carbohydrate = int(input("請輸入碳水化合物含量(g): "))
     protein = int(input("請輸入蛋白質含量(g): "))
     fat = int(input("請輸入脂肪含量(g): "))
-    size = float('{:.2f}'.format(carbohydrate + protein + fat))
+    size = input('請輸入一份食物的重量(g): ')
     divisible = int(input("請輸入可否拆分(不能輸入0、可以輸入1): "))
     calories = protein * 4 + carbohydrate * 4 + fat * 9
     carbohydrate_rate = float('{:.2f}'.format(carbohydrate*4 / calories))
@@ -153,4 +153,4 @@ if totalcal <= 0:
     totalcal = 0
 print("剩餘熱量：",'{:.0f}'.format(cal))
 print("攝取總熱量：",'{:.0f}'.format(totalcal))
-print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))   
+print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))
