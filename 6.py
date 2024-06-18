@@ -47,7 +47,7 @@ if goal == 1:
 elif goal == 3:
     calories_per_meal += 80  
 
-print('每日消耗量(TDEE):, {:.0f}'.format(daily_calories))
+print('每日消耗量(TDEE): {:.0f}'.format(daily_calories))
 print('每餐應攝取的熱量：{:.0f}'.format(calories_per_meal))
 
 foods = []
@@ -98,7 +98,7 @@ for i in range(1,n+1):
     foods.append(temp)
 print("食物陣列:",foods)
 
-cal = calories_per_meal
+cal = calories_per_meal - int(input("請輸入此餐已攝取的熱量: "))
 totalc = 0
 totalp = 0
 totalf = 0
@@ -189,5 +189,5 @@ totalcal = totalc*4+totalp*4+totalf*9
 if totalcal <= 0:
     totalcal = 0
 print("剩餘熱量：",'{:.0f}'.format(cal))
-print("已攝取的總熱量：",'{:.0f}'.format(totalcal))
+print("此次攝取的總熱量：",'{:.0f}'.format(totalcal))
 print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))
