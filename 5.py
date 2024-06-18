@@ -21,10 +21,10 @@ activity_type = int(input("請輸入平常的活動習慣(坐式生活輸入1、
 while activity_type >= 6 or activity_type <= 0:
     print("請輸入正確活動習慣")
     activity_type = int(input("請輸入平常的活動習慣(坐式生活輸入1、輕度活動輸入2、中度活動輸入3、高度活動輸入4、極高度活動輸入5): "))
-goal = int(input("請輸入希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
+goal = int(input("請希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
 while goal >= 4 or goal <= 0:
-    print("請輸入正確希望減脂")
-    goal = int(input("請輸入希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
+    print("請輸入正確數值")
+    goal = int(input("請希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
 
 if gender == 1:
     bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
@@ -173,4 +173,3 @@ if totalcal <= 0:
 print("剩餘熱量：",'{:.0f}'.format(cal))
 print("已攝取的總熱量：",'{:.0f}'.format(totalcal))
 print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))
-
