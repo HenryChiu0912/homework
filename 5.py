@@ -8,15 +8,27 @@ def takefat_rate(foods):
     return foods[10]
 
 gender = int(input("請輸入生理性別(男性輸入1、女性輸入2): "))
+while gender >= 3 or gender <= 0:
+    print("請輸入正確性別")
+    gender = int(input("請輸入生理性別(男性輸入1、女性輸入2): "))
 weight = float(input("請輸入體重(kg): "))
 height = float(input("請輸入身高(cm): "))
 age = int(input("請輸入年齡: "))
+while age <= 0:
+    print("請輸入正確年齡")
+    age = int(input("請輸入年齡: "))
 activity_type = int(input("請輸入平常的活動習慣(坐式生活輸入1、輕度活動輸入2、中度活動輸入3、高度活動輸入4、極高度活動輸入5): "))
+while activity_type >= 6 or activity_type <= 0:
+    print("請輸入正確活動習慣")
+    activity_type = int(input("請輸入平常的活動習慣(坐式生活輸入1、輕度活動輸入2、中度活動輸入3、高度活動輸入4、極高度活動輸入5): "))
 goal = int(input("請輸入希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
+while goal >= 4 or goal <= 0:
+    print("請輸入正確希望減脂")
+    goal = int(input("請輸入希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
 
 if gender == 1:
     bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
-else:
+elif gender == 2:
     bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age)
 
 activity = {1: 1.2, 2: 1.4, 3: 1.5, 4: 1.7, 5: 1.9}
@@ -25,9 +37,9 @@ daily_calories = bmr * activity[activity_type]
 calories_per_meal = daily_calories / 3
 
 if goal == 1:
-    calories_per_meal -= 80  # 減肥
+    calories_per_meal -= 80  
 elif goal == 3:
-    calories_per_meal += 80  # 增肌
+    calories_per_meal += 80  
 
 print('每日消耗量(TDEE):', daily_calories)
 print(f'每餐應攝取的熱量：{calories_per_meal:.0f}')
@@ -43,6 +55,9 @@ for i in range(1,n+1):
     fat = int(input("請輸入脂肪含量(g): "))
     size = int(input('請輸入一份食物的重量(g): '))
     divisible = int(input("請輸入可否拆分(不能輸入0、可以輸入1): "))
+    while divisible >= 2 or divisible <= -1:
+        print("請正確輸入可否拆分")
+        divisible = int(input("請輸入可否拆分(不能輸入0、可以輸入1): "))
     calories = protein * 4 + carbohydrate * 4 + fat * 9
     carbohydrate_rate = float('{:.2f}'.format(carbohydrate*4 / calories))
     calories_rate = float('{:.2f}'.format(calories / size))
