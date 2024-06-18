@@ -67,6 +67,7 @@ totalc = 0
 totalp = 0
 totalf = 0
 advise = []
+
 if goal == 1:
     foods.sort( key=takecarbohydr_rate, reverse=True )
     foods.reverse()
@@ -100,7 +101,7 @@ elif goal == 3:
     for i in range(n):
         temp2=[]
         name_ad=foods[i][1]
-        rate_ad=foods[i][9]
+        rate_ad=foods[i][10]
         temp2.append([name_ad, rate_ad])
         advise.append(temp2)
     print("單位大卡的脂肪熱量(倒數第一項)小者排序:",advise)
@@ -127,7 +128,7 @@ else:
     for i in range(n):
         temp2=[]
         name_ad=foods[i][1]
-        rate_ad=foods[i][8]
+        rate_ad=foods[i][9]
         temp2.append([name_ad,rate_ad])
         advise.append(temp2)
     print("單位重量的熱量(倒數第二項)小者排序:",advise)
@@ -152,5 +153,5 @@ totalcal = totalc*4+totalp*4+totalf*9
 if totalcal <= 0:
     totalcal = 0
 print("剩餘熱量：",'{:.0f}'.format(cal))
-print("攝取總熱量：",'{:.0f}'.format(totalcal))
+print("已攝取的總熱量：",'{:.0f}'.format(totalcal))
 print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))
