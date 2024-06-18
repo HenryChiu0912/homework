@@ -12,7 +12,13 @@ while gender >= 3 or gender <= 0:
     print("請輸入正確性別")
     gender = int(input("請輸入生理性別(男性輸入1、女性輸入2): "))
 weight = float(input("請輸入體重(kg): "))
+while weight <= 0:
+    print("請輸入正確體重")
+    weight = float(input("請輸入體重(kg): "))
 height = float(input("請輸入身高(cm): "))
+while height <= 0:
+    print("請輸入正確身高")
+    height = float(input("請輸入身高(cm): "))
 age = int(input("請輸入年齡: "))
 while age <= 0:
     print("請輸入正確年齡")
@@ -21,10 +27,10 @@ activity_type = int(input("請輸入平常的活動習慣(坐式生活輸入1、
 while activity_type >= 6 or activity_type <= 0:
     print("請輸入正確活動習慣")
     activity_type = int(input("請輸入平常的活動習慣(坐式生活輸入1、輕度活動輸入2、中度活動輸入3、高度活動輸入4、極高度活動輸入5): "))
-goal = int(input("請希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
+goal = int(input("希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
 while goal >= 4 or goal <= 0:
     print("請輸入正確數值")
-    goal = int(input("請希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
+    goal = int(input("希望減脂輸入1、維持體重輸入2、增肌輸入3: "))
 
 if gender == 1:
     bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age)
