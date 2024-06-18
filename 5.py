@@ -42,7 +42,7 @@ elif goal == 3:
     calories_per_meal += 80  
 
 print('每日消耗量(TDEE):', daily_calories)
-print(f'每餐應攝取的熱量：{calories_per_meal:.0f}')
+print('每餐應攝取的熱量：{:.0f}'.format(calories_per_meal))
 
 foods = []
 
@@ -54,6 +54,9 @@ for i in range(1,n+1):
     protein = int(input("請輸入蛋白質含量(g): "))
     fat = int(input("請輸入脂肪含量(g): "))
     size = int(input('請輸入一份食物的重量(g): '))
+    while size < fat+carbohydrate+protein:
+        print("請輸入正確食物重量")
+        size = int(input('請輸入一份食物的重量(g): '))
     divisible = int(input("請輸入可否拆分(不能輸入0、可以輸入1): "))
     while divisible >= 2 or divisible <= -1:
         print("請正確輸入可否拆分")
@@ -92,7 +95,7 @@ if goal == 1:
         rate_ad=foods[i][8]
         temp2.append([name_ad,rate_ad])
         advise.append(temp2)
-    print("單位大卡的碳水化合物熱量(倒數第三項)小者排序:",advise)
+    print("碳水化合物熱量比例小者排序:",advise)
     while cal > 0 and len(foods) != 0 :
         if foods[0][2] <= cal :
             cal -= foods[0][2]
@@ -110,17 +113,17 @@ if goal == 1:
             print('【吃了',foods[0][1],'的{:.2f}'.format(part),'份】,熱量剩餘：{:.2f}'.format(cal))
         else:
             foods.pop(0)
-elif goal == 3:
-    foods.sort(key=takefat_rate, reverse=True )
+elif goal == 2:
+    foods.sort(key=takecalories_rate, reverse=True )
     foods.reverse()
     for i in range(n):
         temp2=[]
         name_ad=foods[i][1]
-        rate_ad=foods[i][10]
-        temp2.append([name_ad, rate_ad])
+        rate_ad=foods[i][9]
+        temp2.append([name_ad,rate_ad])
         advise.append(temp2)
-    print("單位大卡的脂肪熱量(倒數第一項)小者排序:",advise)
-    while cal > 0 and len(foods) != 0:
+    print("單位重量的熱量小者排序:",advise)
+    while cal > 0 and len(foods) != 0 :
         if foods[0][2] <= cal :
             cal -= foods[0][2]
             totalc += foods[0][3]
@@ -138,16 +141,16 @@ elif goal == 3:
         else:
             foods.pop(0)
 else:
-    foods.sort(key=takecalories_rate, reverse=True )
+    foods.sort(key=takefat_rate, reverse=True )
     foods.reverse()
     for i in range(n):
         temp2=[]
         name_ad=foods[i][1]
-        rate_ad=foods[i][9]
-        temp2.append([name_ad,rate_ad])
+        rate_ad=foods[i][10]
+        temp2.append([name_ad, rate_ad])
         advise.append(temp2)
-    print("單位重量的熱量(倒數第二項)小者排序:",advise)
-    while cal > 0 and len(foods) != 0 :
+    print("脂肪熱量比例小者排序:",advise)
+    while cal > 0 and len(foods) != 0:
         if foods[0][2] <= cal :
             cal -= foods[0][2]
             totalc += foods[0][3]
@@ -170,3 +173,4 @@ if totalcal <= 0:
 print("剩餘熱量：",'{:.0f}'.format(cal))
 print("已攝取的總熱量：",'{:.0f}'.format(totalcal))
 print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))
+
