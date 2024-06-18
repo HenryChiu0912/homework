@@ -47,7 +47,7 @@ if goal == 1:
 elif goal == 3:
     calories_per_meal += 80  
 
-print('每日消耗量(TDEE):', daily_calories)
+print('每日消耗量(TDEE):, {:.0f}'.format(daily_calories))
 print('每餐應攝取的熱量：{:.0f}'.format(calories_per_meal))
 
 foods = []
