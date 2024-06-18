@@ -1,4 +1,4 @@
-  def takecarbohydr_rate(foods):
+def takecarbohydr_rate(foods):
     return foods[8]
 
 def takecalories_rate(foods):
@@ -7,7 +7,7 @@ def takecalories_rate(foods):
 def takefat_rate(foods):
     return foods[10]
 
-gender = int(input("請輸入性別(男性輸入1、女性輸入2): "))
+gender = int(input("請輸入生理性別(男性輸入1、女性輸入2): "))
 weight = float(input("請輸入體重(kg): "))
 height = float(input("請輸入身高(cm): "))
 age = int(input("請輸入年齡: "))
@@ -41,7 +41,7 @@ for i in range(1,n+1):
     carbohydrate = int(input("請輸入碳水化合物含量(g): "))
     protein = int(input("請輸入蛋白質含量(g): "))
     fat = int(input("請輸入脂肪含量(g): "))
-    size = input('請輸入一份食物的重量(g): ')
+    size = int(input('請輸入一份食物的重量(g): '))
     divisible = int(input("請輸入可否拆分(不能輸入0、可以輸入1): "))
     calories = protein * 4 + carbohydrate * 4 + fat * 9
     carbohydrate_rate = float('{:.2f}'.format(carbohydrate*4 / calories))
