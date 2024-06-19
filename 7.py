@@ -40,12 +40,11 @@ elif gender == 2:
 activity = {1: 1.2, 2: 1.4, 3: 1.5, 4: 1.7, 5: 1.9}
 
 daily_calories = bmr * activity[activity_type]
-calories_per_meal = daily_calories / 3
-
 if goal == 1:
-    calories_per_meal -= 80  
+    daily_calories -= 240
 elif goal == 3:
-    calories_per_meal += 80  
+     daily_calories += 240 
+calories_per_meal = daily_calories / 3  
 
 print('每日消耗量(TDEE): {:.0f}'.format(daily_calories))
 print('每餐應攝取的熱量：{:.0f}'.format(calories_per_meal))
