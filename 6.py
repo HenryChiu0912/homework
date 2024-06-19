@@ -192,7 +192,8 @@ else:
 totalcal = totalc*4+totalp*4+totalf*9
 if totalcal <= 0:
     totalcal = 0
+if cal <= 0:
+    cal = 0
 print("剩餘熱量：",'{:.0f}'.format(cal))
 print("此次攝取的總熱量：",'{:.0f}'.format(totalcal))
 print('攝取碳水化合物公克：{:.2f}'.format(totalc),'攝取蛋白質公克：{:.2f}'.format(totalp),'攝取脂肪公克：{:.2f}'.format(totalf))
-
